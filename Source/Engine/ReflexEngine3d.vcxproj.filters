@@ -88,12 +88,12 @@
     <ClInclude Include="Core\Engine.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="ReflexInclude.h" />
     <ClInclude Include="IMGUI\imconfig.h">
       <Filter>IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="Core\Entry.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\ReflexInclude.h" />
   </ItemGroup>
 </Project>

@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+
+Source/.vs
+Source/bin
+Source/intermediate

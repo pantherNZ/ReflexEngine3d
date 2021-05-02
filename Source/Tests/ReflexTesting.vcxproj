@@ -92,12 +92,15 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Testing.cpp" />
+    <ClCompile Include="UnitTesting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\ReflexEngine3d.vcxproj">
       <Project>{7621d714-676e-4b19-b780-49b49d4493bc}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UnitTesting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,21 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Components\2D\CameraComponent.cpp" />
+    <ClCompile Include="Components\2D\GridComponent.cpp" />
+    <ClCompile Include="Components\2D\InteractableComponent.cpp" />
+    <ClCompile Include="Components\2D\SFMLObjectComponent.cpp" />
+    <ClCompile Include="Components\2D\SteeringComponent.cpp" />
+    <ClCompile Include="Components\2D\TransformComponent.cpp" />
+    <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
-    <ClCompile Include="Core\EventManager.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Core\Logging.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Core\EventManager.cpp" />
+    <ClCompile Include="Core\Logging.cpp" />
+    <ClCompile Include="Core\Object.cpp" />
+    <ClCompile Include="Core\SceneNode.cpp" />
+    <ClCompile Include="Core\StateManager.cpp" />
+    <ClCompile Include="Core\TileMap.cpp" />
     <ClCompile Include="Core\Utility.cpp" />
+    <ClCompile Include="Core\World.cpp" />
     <ClCompile Include="IMGUI\imgui.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="IMGUI\imgui_demo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -45,15 +47,38 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Systems\2D\CameraSystem.cpp" />
+    <ClCompile Include="Systems\2D\InteractableSystem.cpp" />
+    <ClCompile Include="Systems\2D\MovementSystem.cpp" />
+    <ClCompile Include="Systems\2D\PhysicsSystem.cpp" />
+    <ClCompile Include="Systems\2D\RenderSystem.cpp" />
+    <ClCompile Include="Systems\2D\SteeringSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\ReflexInclude.h" />
+    <ClInclude Include="Components\2D\CameraComponent.h" />
+    <ClInclude Include="Components\2D\ColliderComponent.h" />
+    <ClInclude Include="Components\2D\GridComponent.h" />
+    <ClInclude Include="Components\2D\InteractableComponent.h" />
+    <ClInclude Include="Components\2D\RigidBodyComponent.h" />
+    <ClInclude Include="Components\2D\SFMLObjectComponent.h" />
+    <ClInclude Include="Components\2D\SteeringComponent.h" />
+    <ClInclude Include="Components\2D\TransformComponent.h" />
+    <ClInclude Include="Components\Component.h" />
+    <ClInclude Include="Core\BaseObject.h" />
+    <ClInclude Include="Core\Context.h" />
     <ClInclude Include="Core\Engine.h" />
     <ClInclude Include="Core\Entry.h" />
     <ClInclude Include="Core\EventManager.h" />
     <ClInclude Include="Core\Events.h" />
     <ClInclude Include="Core\Logging.h" />
+    <ClInclude Include="Core\Object.h" />
+    <ClInclude Include="Core\ResourceManager.h" />
+    <ClInclude Include="Core\SceneNode.h" />
+    <ClInclude Include="Core\StateManager.h" />
+    <ClInclude Include="Core\TileMap.h" />
     <ClInclude Include="Core\Utility.h" />
+    <ClInclude Include="Core\World.h" />
     <ClInclude Include="IMGUI\imconfig.h" />
     <ClInclude Include="IMGUI\imgui.h" />
     <ClInclude Include="IMGUI\imgui_internal.h" />
@@ -62,9 +87,18 @@
     <ClInclude Include="IMGUI\imstb_truetype.h" />
     <ClInclude Include="JSON\json\json-forwards.h" />
     <ClInclude Include="JSON\json\json.h" />
+    <ClInclude Include="Memory\ComponentAllocator.h" />
     <ClInclude Include="Memory\VectorMap.h" />
     <ClInclude Include="Memory\VectorSet.h" />
     <ClInclude Include="Precompiled.h" />
+    <ClInclude Include="Systems\2D\CameraSystem.h" />
+    <ClInclude Include="Systems\2D\InteractableSystem.h" />
+    <ClInclude Include="Systems\2D\MovementSystem.h" />
+    <ClInclude Include="Systems\2D\PhysicsSystem.h" />
+    <ClInclude Include="Systems\2D\RenderSystem.h" />
+    <ClInclude Include="Systems\2D\SteeringSystem.h" />
+    <ClInclude Include="Systems\BaseSystem.h" />
+    <ClInclude Include="Systems\System.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -118,11 +152,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>..\Dependencies\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;opengl32.lib;box2d-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dependencies\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -136,6 +173,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>..\Dependencies\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -143,6 +181,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib;opengl32.lib;box2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dependencies\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

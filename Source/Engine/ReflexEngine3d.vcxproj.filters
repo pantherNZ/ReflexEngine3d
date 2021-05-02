@@ -13,6 +13,24 @@
     <Filter Include="IMGUI">
       <UniqueIdentifier>{9262dc60-bacf-422d-ad55-2f31bc7962fe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{3eaf711b-c66c-4298-a9f9-7050f4be4f69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{552ab055-858c-4994-8f36-12adbd40467e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\2D">
+      <UniqueIdentifier>{ae9e3398-6c46-40ed-b5dd-33aade371cb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\3D">
+      <UniqueIdentifier>{70af19d4-63ea-4178-bd28-10bdc8548e18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\2D">
+      <UniqueIdentifier>{9b0d7c1d-d707-4d91-bc7e-4bc8058e9729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\3D">
+      <UniqueIdentifier>{d23f3016-52b1-458b-832f-82214ae862d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Logging.cpp">
@@ -27,9 +45,6 @@
     <ClCompile Include="IMGUI\imgui.cpp">
       <Filter>IMGUI</Filter>
     </ClCompile>
-    <ClCompile Include="IMGUI\imgui_demo.cpp">
-      <Filter>IMGUI</Filter>
-    </ClCompile>
     <ClCompile Include="IMGUI\imgui_draw.cpp">
       <Filter>IMGUI</Filter>
     </ClCompile>
@@ -41,6 +56,60 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\EventManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\StateManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\World.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\CameraComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\GridComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\InteractableComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\SFMLObjectComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\SteeringComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\2D\TransformComponent.cpp">
+      <Filter>Components\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Object.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\CameraSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\InteractableSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\MovementSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\PhysicsSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\RenderSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\2D\SteeringSystem.cpp">
+      <Filter>Systems\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TileMap.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SceneNode.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,5 +164,83 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="..\Include\ReflexInclude.h" />
+    <ClInclude Include="Core\Context.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\StateManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\World.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ResourceManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\CameraComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\ColliderComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\GridComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\InteractableComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\RigidBodyComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\SFMLObjectComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\SteeringComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\2D\TransformComponent.h">
+      <Filter>Components\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BaseObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Object.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\BaseSystem.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\System.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\CameraSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\InteractableSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\MovementSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\PhysicsSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\RenderSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\2D\SteeringSystem.h">
+      <Filter>Systems\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\ComponentAllocator.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SceneNode.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TileMap.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

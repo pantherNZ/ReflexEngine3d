@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Component.h"
-#include "Utility.h"
-#include "InteractableSystem.h"
-#include "SFMLObjectComponent.h"
+#include "Components/Component.h"
+#include "Core/Utility.h"
+#include "Systems/2D/InteractableSystem.h"
+#include "Components/2D/SFMLObjectComponent.h"
 
 namespace Reflex::Components
 {

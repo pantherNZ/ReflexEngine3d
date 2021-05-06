@@ -1,7 +1,6 @@
-#include "Precompiled.h"
 #include "SFMLObjectComponent.h"
-#include "Object.h"
-#include "ColliderComponent.h"
+#include "Objects/Object.h"
+#include "Components/2D/ColliderComponent.h"
 
 namespace Reflex::Components
 {
@@ -158,7 +157,7 @@ namespace Reflex::Components
 
 	void Sprite::GetValues( std::vector< std::pair< std::string, std::string > >& values ) const
 	{
-		TODO( "Serialise sprite texture somehow" );
+		TODO( "Serialise sprite texture path" );
 		if( !Reflex::IsDefault( getColor() ) )
 			values.emplace_back( "Colour", Reflex::ToString( getColor() ) );
 	}

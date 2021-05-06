@@ -1,5 +1,24 @@
 #include "Precompiled.h"
 
+#include "World.h"
+#include "Objects/Object.h"
+
+#include "Components/2D/TransformComponent.h"
+#include "Components/2D/CameraComponent.h"
+#include "Components/2D/InteractableComponent.h"
+#include "Components/2D/SFMLObjectComponent.h"
+#include "Components/2D/GridComponent.h"
+#include "Components/2D/RigidBodyComponent.h"
+#include "Components/2D/ColliderComponent.h"
+#include "Components/2D/SteeringComponent.h"
+
+#include "Systems/2D/RenderSystem.h"
+#include "Systems/2D/InteractableSystem.h"
+#include "Systems/2D/MovementSystem.h"
+#include "Systems/2D/CameraSystem.h"
+#include "Systems/2D/SteeringSystem.h"
+#include "Systems/2D/PhysicsSystem.h"
+
 namespace Reflex::Core
 {
 	World::World( const Context& context, const sf::FloatRect& worldBounds, const sf::Vector2f& gravity )

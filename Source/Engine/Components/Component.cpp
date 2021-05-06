@@ -1,6 +1,6 @@
 #include "Precompiled.h"
 #include "Component.h"
-#include "Object.h"
+#include "Objects/Object.h"
 
 namespace Reflex::Components
 {

@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Precompiled.h"
-#include "Component.h"
-#include "Object.h"
-#include "BaseSystem.h"
+#include "Components/Component.h"
+#include "Objects/Object.h"
+#include "Systems/BaseSystem.h"
 
 namespace Reflex::Core { class World; }
 

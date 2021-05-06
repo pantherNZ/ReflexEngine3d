@@ -3,12 +3,12 @@
 #include "Precompiled.h"
 #include "ResourceManager.h"
 #include "Context.h"
-#include "BaseSystem.h"
-#include "ComponentAllocator.h"
+#include "Systems/BaseSystem.h"
+#include "Memory/ComponentAllocator.h"
 #include "EventManager.h"
 #include "TileMap.h"
-#include "BaseObject.h"
-#include "Component.h"
+#include "Objects/BaseObject.h"
+#include "Components/Component.h"
 #include "Box2DDebugDraw.h"
 
 // Engine class
@@ -316,10 +316,10 @@ namespace Reflex::Core
 
 		for( auto iter = m_systems.begin(); iter != m_systems.end(); ++iter )
 		{
-			if( systemType == Type( typeid( iter->first.get() ) ) )
+			if( systemType == iter->first )
 			{
-				iter->first->OnSystemShutdown();
-				iter->first.release();
+				iter->second->OnSystemShutdown();
+				iter->second.release();
 				m_systems.erase( iter );
 				break;
 			}

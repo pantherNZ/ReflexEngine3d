@@ -1,7 +1,6 @@
-#include "Precompiled.h"
 #include "PhysicsSystem.h"
-#include "TransformComponent.h"
-#include "RigidBodyComponent.h"
+#include "Components/2D/TransformComponent.h"
+#include "Components/2D/RigidBodyComponent.h"
 
 namespace Reflex::Systems
 {

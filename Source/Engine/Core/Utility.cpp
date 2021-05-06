@@ -1,4 +1,3 @@
-#include "Precompiled.h"
 #include "Utility.h"
 
 namespace Reflex
@@ -9,6 +8,7 @@ namespace Reflex
 	{
 		std::vector< std::string > vecReturn;
 		std::string strWriter;
+		strWriter.reserve( _strInput.size() );
 
 		for( unsigned i = 0; i < _strInput.size(); ++i )
 		{
@@ -23,7 +23,7 @@ namespace Reflex
 			}
 		}
 
-		if( strWriter.size() )
+		if( !strWriter.empty() )
 			vecReturn.push_back( strWriter );
 
 		return std::move( vecReturn );

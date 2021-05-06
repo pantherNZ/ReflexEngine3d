@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Component.h"
-#include "VectorSet.h"
-#include "Object.h"
+#include "Components/Component.h"
+#include "Memory/VectorSet.h"
+#include "Objects/Object.h"
 
 namespace Reflex::Components
 {

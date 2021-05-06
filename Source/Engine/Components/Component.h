@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Precompiled.h"
-#include "BaseObject.h"
+#include "Objects/BaseObject.h"
 
 #undef GetObject
 

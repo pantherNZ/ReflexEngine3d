@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Component.h"
-#include "SceneNode.h"
-#include "MovementSystem.h"
-#include "Events.h"
+#include "Components/Component.h"
+#include "Core/SceneNode.h"
+#include "Systems/2D/MovementSystem.h"
+#include "Core/Events.h"
 
 namespace Reflex::Components
 {

@@ -1,7 +1,5 @@
-#include "Precompiled.h"
 #include "SceneNode.h"
-#include "Object.h"
-#include "TransformComponent.h"
+#include "Components/2D/TransformComponent.h"
 #include "Logging.h"
 
 namespace Reflex::Core

@@ -1,8 +1,7 @@
-#include "Precompiled.h"
 #include "Object.h"
-#include "World.h"
-#include "Component.h"
-#include "TransformComponent.h"
+#include "Core/World.h"
+#include "Components/Component.h"
+#include "Components/2D/TransformComponent.h"
 
 namespace Reflex
 {

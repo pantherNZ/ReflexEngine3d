@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Component.h"
-#include "CameraSystem.h"
-#include "Object.h"
+#include "Components/Component.h"
+#include "Systems/2D/CameraSystem.h"
+#include "Objects/Object.h"
 
 namespace Reflex::Components
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "System.h"
-#include "SteeringComponent.h"
+#include "Systems/System.h"
+#include "Components/2D/SteeringComponent.h"
 
 namespace Reflex::Systems
 {

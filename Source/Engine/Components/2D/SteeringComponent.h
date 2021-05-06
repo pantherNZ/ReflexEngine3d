@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Component.h"
-#include "Utility.h"
-#include "Object.h"
+#include "../../Components\Component.h"
+#include "../../Objects\Object.h"
+#include "../../Core\Utility.h"
 
 namespace Reflex::Systems { class SteeringSystem; }
 

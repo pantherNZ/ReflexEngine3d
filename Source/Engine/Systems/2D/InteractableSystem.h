@@ -1,7 +1,7 @@
 #pragma once
 
-#include "System.h"
-#include "TransformComponent.h"
+#include "Systems/System.h"
+#include "Components/2D/TransformComponent.h"
 
 namespace Reflex::Systems
 {

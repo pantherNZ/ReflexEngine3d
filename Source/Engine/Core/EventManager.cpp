@@ -1,4 +1,3 @@
-#include "Precompiled.h"
 #include "EventManager.h"
 #include "World.h"
 

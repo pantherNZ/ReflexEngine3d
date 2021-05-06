@@ -1,9 +1,8 @@
-#include "Precompiled.h"
 #include "GridComponent.h"
-#include "TransformComponent.h"
-#include "Object.h"
-#include "World.h"
-#include "SceneNode.h"
+#include "Components/2D/TransformComponent.h"
+#include "Objects/Object.h"
+#include "Core/World.h"
+#include "Core/SceneNode.h"
 
 namespace Reflex::Components
 {

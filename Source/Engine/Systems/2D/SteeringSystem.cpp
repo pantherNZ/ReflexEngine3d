@@ -1,9 +1,8 @@
-#include "Precompiled.h"
-#include "SteeringSystem.h"
-#include "TransformComponent.h"
-#include "World.h"
-#include "Logging.h"
-#include "SFMLObjectComponent.h"
+#include "Systems/2D/SteeringSystem.h"
+#include "Components/2D/TransformComponent.h"
+#include "Core/World.h"
+#include "Core/Logging.h"
+#include "Components/2D/SFMLObjectComponent.h"
 
 namespace Reflex::Systems
 {

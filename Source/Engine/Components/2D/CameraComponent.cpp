@@ -1,7 +1,6 @@
-#include "Precompiled.h"
 #include "CameraComponent.h"
 #include "TransformComponent.h"
-#include "World.h"
+#include "Core/World.h"
 
 namespace Reflex::Components
 {

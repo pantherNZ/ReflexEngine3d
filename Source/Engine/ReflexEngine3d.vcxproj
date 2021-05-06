@@ -18,14 +18,16 @@
     <ClCompile Include="Components\2D\SteeringComponent.cpp" />
     <ClCompile Include="Components\2D\TransformComponent.cpp" />
     <ClCompile Include="Components\Component.cpp" />
+    <ClCompile Include="Core\Box2DDebugDraw.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
     <ClCompile Include="Core\EventManager.cpp" />
     <ClCompile Include="Core\Logging.cpp" />
-    <ClCompile Include="Core\Object.cpp" />
     <ClCompile Include="Core\SceneNode.cpp" />
     <ClCompile Include="Core\StateManager.cpp" />
     <ClCompile Include="Core\TileMap.cpp" />
-    <ClCompile Include="Core\Utility.cpp" />
+    <ClCompile Include="Core\Utility.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Core\World.cpp" />
     <ClCompile Include="IMGUI\imgui.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
@@ -43,6 +45,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Objects\Object.cpp" />
     <ClCompile Include="Precompiled.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -65,14 +68,13 @@
     <ClInclude Include="Components\2D\SteeringComponent.h" />
     <ClInclude Include="Components\2D\TransformComponent.h" />
     <ClInclude Include="Components\Component.h" />
-    <ClInclude Include="Core\BaseObject.h" />
+    <ClInclude Include="Core\Box2DDebugDraw.h" />
     <ClInclude Include="Core\Context.h" />
     <ClInclude Include="Core\Engine.h" />
     <ClInclude Include="Core\Entry.h" />
     <ClInclude Include="Core\EventManager.h" />
     <ClInclude Include="Core\Events.h" />
     <ClInclude Include="Core\Logging.h" />
-    <ClInclude Include="Core\Object.h" />
     <ClInclude Include="Core\ResourceManager.h" />
     <ClInclude Include="Core\SceneNode.h" />
     <ClInclude Include="Core\StateManager.h" />
@@ -90,6 +92,8 @@
     <ClInclude Include="Memory\ComponentAllocator.h" />
     <ClInclude Include="Memory\VectorMap.h" />
     <ClInclude Include="Memory\VectorSet.h" />
+    <ClInclude Include="Objects\BaseObject.h" />
+    <ClInclude Include="Objects\Object.h" />
     <ClInclude Include="Precompiled.h" />
     <ClInclude Include="Systems\2D\CameraSystem.h" />
     <ClInclude Include="Systems\2D\InteractableSystem.h" />
@@ -152,7 +156,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\Dependencies\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Dependencies\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Precompiled.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -173,7 +178,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>..\Dependencies\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Dependencies\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>

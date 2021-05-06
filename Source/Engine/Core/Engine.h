@@ -1,7 +1,6 @@
 #pragma once
 
 // Includes
-#include "..\Precompiled.h"
 #include "ResourceManager.h"
 #include "StateManager.h"
 

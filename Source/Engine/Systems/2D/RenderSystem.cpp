@@ -1,8 +1,7 @@
-#include "Precompiled.h"
-#include "World.h"
+#include "Core/World.h"
 #include "RenderSystem.h"
-#include "SFMLObjectComponent.h"
-#include "TransformComponent.h"
+#include "Components/2D/SFMLObjectComponent.h"
+#include "Components/2D/TransformComponent.h"
 
 namespace Reflex::Systems
 {

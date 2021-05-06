@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Component.h"
+#include "Components/Component.h"
 #include "TransformComponent.h"
-#include "Events.h"
+#include "Core/Events.h"
 
 namespace Reflex::Components
 {

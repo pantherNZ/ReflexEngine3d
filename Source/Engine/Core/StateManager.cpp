@@ -1,4 +1,3 @@
-#include "Precompiled.h"
 #include "StateManager.h"
 
 namespace Reflex::Core

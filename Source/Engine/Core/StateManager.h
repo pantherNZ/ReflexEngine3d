@@ -3,7 +3,7 @@
 // Includes
 #include "Context.h"
 #include "World.h"
-#include "CameraComponent.h"
+#include "Components/2D/CameraComponent.h"
 
 namespace Reflex::Core
 {

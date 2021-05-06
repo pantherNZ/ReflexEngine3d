@@ -1,8 +1,6 @@
-#include "Precompiled.h"
-#include "World.h"
+#include "Core/World.h"
 #include "InteractableSystem.h"
-#include "InteractableComponent.h"
-#include "SFMLObjectComponent.h"
+#include "Components/2D/InteractableComponent.h"
 
 using namespace Reflex::Components;
 

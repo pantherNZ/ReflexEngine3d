@@ -31,6 +31,9 @@
     <Filter Include="Systems\3D">
       <UniqueIdentifier>{d23f3016-52b1-458b-832f-82214ae862d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{80aee4d7-219b-47bc-a330-e6d6b1c9a7d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Logging.cpp">
@@ -82,9 +85,6 @@
     <ClCompile Include="Components\2D\TransformComponent.cpp">
       <Filter>Components\2D</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Object.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="Systems\2D\CameraSystem.cpp">
       <Filter>Systems\2D</Filter>
     </ClCompile>
@@ -110,6 +110,12 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\SceneNode.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Object.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Box2DDebugDraw.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -200,12 +206,6 @@
     <ClInclude Include="Components\2D\TransformComponent.h">
       <Filter>Components\2D</Filter>
     </ClInclude>
-    <ClInclude Include="Core\BaseObject.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Object.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="Systems\BaseSystem.h">
       <Filter>Systems</Filter>
     </ClInclude>
@@ -240,6 +240,15 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\TileMap.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\BaseObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Object.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Box2DDebugDraw.h">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

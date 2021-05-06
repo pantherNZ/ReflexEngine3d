@@ -1,7 +1,6 @@
-#include "Precompiled.h"
 #include "InteractableComponent.h"
 #include "SFMLObjectComponent.h"
-#include "Object.h"
+#include "Objects/Object.h"
 
 namespace Reflex::Components
 {

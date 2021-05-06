@@ -1,9 +1,8 @@
-#include "Precompiled.h"
 #include "CameraSystem.h"
-#include "CameraComponent.h"
-#include "TransformComponent.h"
-#include "Object.h"
-#include "World.h"
+#include "Components/2D/CameraComponent.h"
+#include "Components/2D/TransformComponent.h"
+#include "Objects/Object.h"
+#include "Core/World.h"
 
 namespace Reflex::Systems
 {

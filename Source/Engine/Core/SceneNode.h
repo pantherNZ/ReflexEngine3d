@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Precompiled.h"
-#include "Object.h"
+#include "Objects/Object.h"
 
 namespace Reflex::Core
 {

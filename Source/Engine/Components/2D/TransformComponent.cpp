@@ -1,7 +1,7 @@
 #include "Precompiled.h"
 #include "TransformComponent.h"
-#include "Object.h"
-#include "World.h"
+#include "Objects/Object.h"
+#include "Core/World.h"
 
 namespace Reflex::Components
 {

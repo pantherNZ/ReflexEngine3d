@@ -3,7 +3,10 @@
 #include <typeindex>
 #include <array>
 #include <vector>
-#include <b2_draw.h>
+
+#include "SFML/Graphics/Rect.hpp"
+#include "Box2D/b2_draw.h"
+#include "Box2D/b2_math.h"
 
 // Common Utility
 namespace Reflex

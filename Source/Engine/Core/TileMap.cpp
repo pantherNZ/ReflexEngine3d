@@ -1,8 +1,7 @@
-#include "Precompiled.h"
 #include "TileMap.h"
-#include "Object.h"
-#include "TransformComponent.h"
-#include "SFMLObjectComponent.h"
+#include "Objects/Object.h"
+#include "Components/2D/TransformComponent.h"
+#include "Components/2D/SFMLObjectComponent.h"
 
 #define TileMapLogging
 

@@ -1,5 +1,8 @@
 #pragma once
 
+#include <utility>
+#include <vector>
+
 namespace Reflex
 {
 	template< typename Key, typename Value >

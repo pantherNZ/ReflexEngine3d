@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "CameraSystem.h"
 #include "Components/2D/CameraComponent.h"
 #include "Components/2D/TransformComponent.h"

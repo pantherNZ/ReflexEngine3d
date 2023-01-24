@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "SceneNode.h"
 #include "Components/2D/TransformComponent.h"
 #include "Logging.h"

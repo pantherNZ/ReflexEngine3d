@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "SFMLObjectComponent.h"
 #include "Objects/Object.h"
 #include "Components/2D/ColliderComponent.h"

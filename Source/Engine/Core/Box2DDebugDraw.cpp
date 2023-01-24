@@ -1,5 +1,6 @@
 #include "Precompiled.h"
 #include "Box2DDebugDraw.h"
+#include "Utility.h"
 
 namespace Reflex::Core
 {

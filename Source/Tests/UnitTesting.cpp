@@ -1,11 +1,16 @@
 #pragma once
 
-#include "../ReflexEngine/Include.h"
+#include "ReflexInclude.h"
 #include "UnitTesting.h"
 
 using namespace Reflex;
 
 class TestState;
+
+Reflex::Application* Reflex::CreateApplication()
+{
+	return new TestState();
+}
 
 int main()
 {
@@ -16,17 +21,19 @@ int main()
 	return 0;
 }
 
-class TestState : public Core::State, public UnitTesting
+class TestState : public Reflex::Application, public UnitTesting
 {
 public:
-	TestState( Core::StateManager& stateManager )
-		: State( stateManager )
+	TestState()
 	{
 		RegisterSection( "---- Reflex Utility functions -------" );
 		RegisterTest( std::bind( Reflex::IsDefault< sf::Vector2f >, sf::Vector2f() ), true, "Reflex::IsDefault with sf::Vector2f" );
+		RegisterTest( std::bind( Reflex::IsDefault< sf::Vector2f >, sf::Vector2f( 0.0f, 0.0f ) ), true, "Reflex::IsDefault with sf::Vector2f" );
 		RegisterTest( std::bind( Reflex::IsDefault< sf::Vector2f >, sf::Vector2f( 1.0f, 0.0f ) ), false, "Reflex::IsDefault with sf::Vector2f non zero" );
-		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color() ), true, "Reflex::IsDefault with sf::Vector2f non zero" );
-		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color( 1, 1, 1, 255 ) ), false, "Reflex::IsDefault with sf::Vector2f non zero" );
+		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color() ), true, "Reflex::IsDefault with sf::Color zero" );
+		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color( 0, 0, 0, 255 ) ), true, "Reflex::IsDefault with sf::Color" );
+		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color( 0 ) ), true, "Reflex::IsDefault with sf::Color zero" );
+		RegisterTest( std::bind( Reflex::IsDefault< sf::Color >, sf::Color( 1, 1, 1, 255 ) ), false, "Reflex::IsDefault with sf::Color non zero" );
 
 		//RegisterSection( "---- Reflex Create Object -------" );
 
@@ -42,8 +49,6 @@ public:
 		RegisterTest( std::bind( &TestState::TestEventScopeSafety, this ), true, "Test automatic unsubscribing" );
 		RegisterTest( std::bind( &TestState::TestEventsMulti, this ), true, "Test multiple subscribing (different objects)" );
 		RegisterTest( std::bind( &TestState::TestEventsRenderSystem, this ), true, "Test the first real usage of the event system (Render System updating object render index when it changes)" );
-
-		Run();
 	}
 
 protected:

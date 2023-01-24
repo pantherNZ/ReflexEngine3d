@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "Logging.h"
 
 namespace Reflex::Core

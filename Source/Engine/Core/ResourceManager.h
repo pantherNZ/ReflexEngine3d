@@ -1,7 +1,12 @@
 #pragma once
 
+#include <map>
+
 #include "Utility.h"
 #include "Logging.h"
+
+#include "SFML/Graphics/Font.hpp"
+#include "SFML/Graphics/Texture.hpp"
 
 namespace Reflex
 {

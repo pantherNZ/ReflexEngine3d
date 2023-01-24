@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "Core/World.h"
 #include "RenderSystem.h"
 #include "Components/2D/SFMLObjectComponent.h"

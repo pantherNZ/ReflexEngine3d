@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "CameraComponent.h"
 #include "TransformComponent.h"
 #include "Core/World.h"

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Precompiled.h"
 #include "ResourceManager.h"
 #include "Context.h"
 #include "Systems/BaseSystem.h"

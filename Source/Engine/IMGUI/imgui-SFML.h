@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef IMGUI_SFML_H
 #define IMGUI_SFML_H
 

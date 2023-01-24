@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "Core/World.h"
 #include "InteractableSystem.h"
 #include "Components/2D/InteractableComponent.h"

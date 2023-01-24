@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 #include <functional>
+#include "Utility.h"
 
 namespace Reflex::Core
 {

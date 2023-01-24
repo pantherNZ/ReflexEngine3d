@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "InteractableComponent.h"
 #include "SFMLObjectComponent.h"
 #include "Objects/Object.h"

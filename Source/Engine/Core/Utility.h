@@ -3,10 +3,19 @@
 #include <typeindex>
 #include <array>
 #include <vector>
+#include <bitset>
+#include <optional>
+#include <math.h>
+#include <sstream>
+#include <ostream>
+#include <processenv.h>
+#include <algorithm>
 
-#include "SFML/Graphics/Rect.hpp"
-#include "Box2D/b2_draw.h"
+#include "../../Dependencies/include/SFML/Graphics/Rect.hpp"
 #include "Box2D/b2_math.h"
+#include "SFML/Graphics/Color.hpp"
+#include "Box2D/b2_draw.h"
+#include "SFML/Graphics/Sprite.hpp"
 
 // Common Utility
 namespace Reflex
@@ -18,11 +27,11 @@ namespace Reflex
 	extern std::optional< float > box2DUnitToPixelScale;
 
 	// Math common
-	#define PI					3.141592654f
-	#define PI2					6.283185307f
-	#define PIDIV2				1.570796327f
-	#define PIDIV4				0.785398163f
-	#define SQRT2				1.41421356237f
+	constexpr float PI = 3.141592654f;		
+	constexpr float PI2 = 6.283185307f;
+	constexpr float PIDIV2 = 1.570796327f;
+	constexpr float PIDIV = 0.785398163f;
+	constexpr float SQRT2 = 0.41421356237f;
 
 	// String common
 	#define STRINGIFY( x ) #x
@@ -664,28 +673,6 @@ namespace Reflex
 	{
 		return ( container.push_back( args ), ... );
 	}
-
-	#define FOREGROUND_YELLOW FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY
-
-	struct SetConsoleTextAttributes
-	{
-		SetConsoleTextAttributes( const WORD attributes )
-		{
-			CONSOLE_SCREEN_BUFFER_INFO Info;
-			HANDLE hStdout = GetStdHandle( STD_OUTPUT_HANDLE );
-			GetConsoleScreenBufferInfo( hStdout, &Info );
-			savedAttributes = Info.wAttributes;
-			SetConsoleTextAttribute( hStdout, attributes );
-		}
-
-		~SetConsoleTextAttributes()
-		{
-			SetConsoleTextAttribute( GetStdHandle( STD_OUTPUT_HANDLE ), savedAttributes );
-		}
-
-	private:
-		WORD savedAttributes = 0;
-	};
 
 	// Hash stuff
 	template <typename T, typename... Rest>

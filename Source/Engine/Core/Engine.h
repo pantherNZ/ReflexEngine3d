@@ -12,24 +12,24 @@
 #define REFLEX_API __declspec(dllimport)
 #endif
 
-//namespace Reflex
-//{
-//	class REFLEX_API Application
-//	{
-//	public:
-//		Application();
-//		virtual ~Application();
-//
-//		virtual void Run();
-//		int GetExitCode() const;
-//
-//	protected:
-//
-//	private:
-//	};
-//
-//	Application* CreateApplication();
-//}
+namespace Reflex
+{
+	class REFLEX_API Application
+	{
+	public:
+		Application() { }
+		virtual ~Application() { }
+
+		virtual void Run() { }
+		int GetExitCode() const { return 0; }
+
+	protected:
+
+	private:
+	};
+
+	Application* CreateApplication();
+}
 
 namespace Reflex::Core
 {

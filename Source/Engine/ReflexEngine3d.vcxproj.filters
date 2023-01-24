@@ -45,16 +45,6 @@
     <ClCompile Include="JSON\jsoncpp.cpp">
       <Filter>JSON</Filter>
     </ClCompile>
-    <ClCompile Include="IMGUI\imgui.cpp">
-      <Filter>IMGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="IMGUI\imgui_draw.cpp">
-      <Filter>IMGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="IMGUI\imgui_widgets.cpp">
-      <Filter>IMGUI</Filter>
-    </ClCompile>
-    <ClCompile Include="Precompiled.cpp" />
     <ClCompile Include="Core\Engine.cpp">
       <Filter>Core</Filter>
     </ClCompile>
@@ -118,6 +108,22 @@
     <ClCompile Include="Core\Box2DDebugDraw.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Precompiled.cpp" />
+    <ClCompile Include="IMGUI\imgui.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_demo.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_draw.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui_widgets.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="IMGUI\imgui-SFML.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\EventManager.h">
@@ -144,27 +150,9 @@
     <ClInclude Include="JSON\json\json.h">
       <Filter>JSON</Filter>
     </ClInclude>
-    <ClInclude Include="IMGUI\imgui.h">
-      <Filter>IMGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="IMGUI\imgui_internal.h">
-      <Filter>IMGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="IMGUI\imstb_rectpack.h">
-      <Filter>IMGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="IMGUI\imstb_textedit.h">
-      <Filter>IMGUI</Filter>
-    </ClInclude>
-    <ClInclude Include="IMGUI\imstb_truetype.h">
-      <Filter>IMGUI</Filter>
-    </ClInclude>
     <ClInclude Include="Precompiled.h" />
     <ClInclude Include="Core\Engine.h">
       <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="IMGUI\imconfig.h">
-      <Filter>IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="Core\Entry.h">
       <Filter>Core</Filter>
@@ -249,6 +237,33 @@
       <Filter>Objects</Filter>
     </ClInclude>
     <ClInclude Include="Core\Box2DDebugDraw.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imconfig.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui_internal.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui-SFML.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imgui-SFML_export.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_rectpack.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_textedit.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="IMGUI\imstb_truetype.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\OSUtility.h">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

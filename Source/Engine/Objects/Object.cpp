@@ -1,3 +1,4 @@
+#include "Precompiled.h"
 #include "Object.h"
 #include "Core/World.h"
 #include "Components/Component.h"
